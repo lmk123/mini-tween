@@ -1,0 +1,9 @@
+{
+  "name": "mini-tween",
+  "version": "1.0.0",
+  "description": "Minimal tweening engine.",
+  "main": "tween.js",
+  "repository": "https://github.com/lmk123/tween",
+  "author": "Mingkai Li (http://www.limingkai.cn/)",
+  "license": "MIT"
+}
