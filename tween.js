@@ -24,7 +24,7 @@
     var changeValue = endValue - startValue
     var updateCount = during / updateTime
     var perUpdateDistance = 1 / updateCount
-    var position = 0
+    var position = perUpdateDistance
 
     return new Promise(function (resolve) {
       function step () {
@@ -34,7 +34,10 @@
         if (position < 1) { // 如果动画还没结束，则准备在下一帧更新动画
           rAF(step)
         } else {
-          resolve()
+          rAF(function () {
+            stepCb(endValue)
+            resolve()
+          })
         }
       }
 
